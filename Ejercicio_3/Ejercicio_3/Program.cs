@@ -6,7 +6,7 @@ namespace Ejercicio_3
     {
         static void Main(string[] args)
         {
-            int edad, temp, cant;
+            int edad, temp, cant, enf = 0;
             string dpt, tos, fiebre;
             
             Console.WriteLine("********CONTROL DE SALUD*********");
@@ -27,7 +27,11 @@ namespace Ejercicio_3
                 Console.Write("Presenta fiebre? (SI o NO): ");
                 fiebre = Console.ReadLine();
 
-                if ()
+                if ((temp > 38) && (tos == "SI") && (fiebre == "NO"))
+                {
+                    i = enf;
+                    Console.WriteLine("Empleados enfermos: " + i);
+                }
 
             }
 
