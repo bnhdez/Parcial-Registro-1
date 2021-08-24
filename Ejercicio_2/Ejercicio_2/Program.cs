@@ -14,10 +14,13 @@ namespace Ejercicio_2
             Console.Write("Ingrese sus sueldo: ");
             sueldo = double.Parse(Console.ReadLine());
 
+            //cadena de if segun antigüedad del empleado
             if (años == 5)
             {
+                //formula para calcular bono
                 aumento = sueldo * 0.05;
                 n_sueldo = aumento + sueldo;
+                //imprimimos resultados
                 Console.WriteLine("Sus años en la empresa son " + años + ", contando con un bono de $" + aumento + " y un nuevo sueldo de $" + n_sueldo);
             }
             else if (años == 10)
