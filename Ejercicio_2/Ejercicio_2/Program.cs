@@ -20,6 +20,24 @@ namespace Ejercicio_2
                 n_sueldo = aumento + sueldo;
                 Console.WriteLine("Sus años en la empresa son " + años + ", contando con un bono de $" + aumento + " y un nuevo sueldo de $" + n_sueldo);
             }
+            else if (años == 10)
+            {
+                aumento = sueldo * 0.08;
+                n_sueldo = aumento + sueldo;
+                Console.WriteLine("Sus años en la empresa son " + años + ", contando con un bono de $" + aumento + " y un nuevo sueldo de $" + n_sueldo);
+            }
+            else if (años == 15)
+            {
+                aumento = sueldo * 0.10;
+                n_sueldo = aumento + sueldo;
+                Console.WriteLine("Sus años en la empresa son " + años + ", contando con un bono de $" + aumento + " y un nuevo sueldo de $" + n_sueldo);
+            }
+            else if (años > 15)
+            {
+                aumento = sueldo * 0.15;
+                n_sueldo = aumento + sueldo;
+                Console.WriteLine("Sus años en la empresa son " + años + ", contando con un bono de $" + aumento + " y un nuevo sueldo de $" + n_sueldo);
+            }
 
         }
     }
