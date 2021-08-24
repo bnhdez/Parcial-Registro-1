@@ -11,7 +11,7 @@ namespace Ejercicio_3
             string dpt, tos, fiebre;
             
             Console.WriteLine("********CONTROL DE SALUD*********");
-            Console.WriteLine("Ingrese la cantidad de empeados a evaluar");
+            Console.WriteLine("Ingrese la cantidad de empleados a evaluar");
             cant = int.Parse(Console.ReadLine());
 
             for (int i = 1; i <= cant; i++)
@@ -42,6 +42,8 @@ namespace Ejercicio_3
 
             prom_e = edad_e / enf;
             prom_s = edad_s / sano;
+
+            Console.Clear();
 
             Console.WriteLine();
             Console.WriteLine("Empleados enfermos: " + enf);
