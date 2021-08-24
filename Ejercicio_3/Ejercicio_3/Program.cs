@@ -7,7 +7,7 @@ namespace Ejercicio_3
         static void Main(string[] args)
         {
             int edad, edad_s = 0, edad_e = 0, temp, cant, enf = 0, sano = 0;
-            double total_s = 0, total_e = 0, prom_s, prom_e;
+            double prom_s, prom_e;
             string dpt, tos, fiebre;
             
             Console.WriteLine("********CONTROL DE SALUD*********");
@@ -31,19 +31,24 @@ namespace Ejercicio_3
                 if ((temp > 38) && (tos == "SI") && (fiebre == "SI") && (edad >= 0))
                 {
                     enf = enf + 1;
-                    edad_e = edad;
+                    edad_e = edad + edad_e;
                 }
                 else if ((temp <= 38) && (edad >= 0))
                 {
                     sano = sano + 1;
-                    edad_s = edad;
+                    edad_s = edad + edad_s;
                 }
             }
+
+            prom_e = edad_e / enf;
+            prom_s = edad_s / sano;
+
             Console.WriteLine();
             Console.WriteLine("Empleados enfermos: " + enf);
             Console.WriteLine("Empleados sanos: " + sano);
             Console.WriteLine();
-            Console.WriteLine("Edad " + edad_s);
+            Console.WriteLine("Promedio de Edad de Empleados sanos " + prom_s);
+            Console.WriteLine("Promedio de Edad de Empleados enfermos " + prom_e);
         }
     }
 }
