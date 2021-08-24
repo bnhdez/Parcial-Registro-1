@@ -31,10 +31,6 @@ namespace Ejercicio_3
                 if ((temp > 38) && (tos == "SI") && (fiebre == "SI"))
                 {
                     enf = enf + 1;
-                    int n_edad = new[]
-                    {
-                        new{edad}
-                    };
 
                 }
                 else if (temp <= 38)
