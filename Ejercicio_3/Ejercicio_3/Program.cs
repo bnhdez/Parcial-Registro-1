@@ -6,8 +6,8 @@ namespace Ejercicio_3
     {
         static void Main(string[] args)
         {
-            int edad, edad_s = 0, edad_e = 0, temp, cant, enf = 0, sano = 0;
-            double prom_s, prom_e;
+            int edad, edad_s = 0, edad_e = 0, cant, enf = 0, sano = 0;
+            double temp, prom_s, prom_e;
             string dpt, tos, fiebre;
             
             Console.WriteLine("********CONTROL DE SALUD*********");
@@ -22,7 +22,7 @@ namespace Ejercicio_3
                 Console.Write("Ingrese el area en el que labora ('Mercadeo', 'IT', 'Recursos Humanos'): ");
                 dpt = Console.ReadLine();
                 Console.Write("Ingrese su temperatura corporal: ");
-                temp = int.Parse(Console.ReadLine());
+                temp = double.Parse(Console.ReadLine());
                 Console.Write("Presenta tos? (SI o NO): ");
                 tos = Console.ReadLine();
                 Console.Write("Presenta fiebre? (SI o NO): ");
