@@ -6,7 +6,7 @@ namespace Ejercicio_3
     {
         static void Main(string[] args)
         {
-            int edad, temp, cant, enf = 0, sano = 0;
+            int edad, edad_s = 0, edad_e = 0, temp, cant, enf = 0, sano = 0;
             double total_s = 0, total_e = 0, prom_s, prom_e;
             string dpt, tos, fiebre;
             
@@ -28,21 +28,22 @@ namespace Ejercicio_3
                 Console.Write("Presenta fiebre? (SI o NO): ");
                 fiebre = Console.ReadLine();
 
-                if ((temp > 38) && (tos == "SI") && (fiebre == "SI"))
+                if ((temp > 38) && (tos == "SI") && (fiebre == "SI") && (edad >= 0))
                 {
                     enf = enf + 1;
-
+                    edad_e = edad;
                 }
-                else if (temp <= 38)
+                else if ((temp <= 38) && (edad >= 0))
                 {
                     sano = sano + 1;
-
+                    edad_s = edad;
                 }
             }
             Console.WriteLine();
             Console.WriteLine("Empleados enfermos: " + enf);
             Console.WriteLine("Empleados sanos: " + sano);
-
+            Console.WriteLine();
+            Console.WriteLine("Edad " + edad_s);
         }
     }
 }
