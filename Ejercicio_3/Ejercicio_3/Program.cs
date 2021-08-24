@@ -14,6 +14,7 @@ namespace Ejercicio_3
             Console.WriteLine("Ingrese la cantidad de empleados a evaluar");
             cant = int.Parse(Console.ReadLine());
 
+            //ciclo de iteracion para n empleados
             for (int i = 1; i <= cant; i++)
             {
                 Console.WriteLine();
@@ -28,29 +29,34 @@ namespace Ejercicio_3
                 Console.Write("Presenta fiebre? (SI o NO): ");
                 fiebre = Console.ReadLine();
 
+                //condicion para separar empleados sanos de enfermos
                 if ((temp > 38) && (tos == "SI") && (fiebre == "SI") && (edad >= 0))
                 {
                     enf = enf + 1;
+                    //las edades de los empleados enfermos se suman
                     edad_e = edad + edad_e;
                 }
                 else if ((temp <= 38) && (edad >= 0))
                 {
                     sano = sano + 1;
+                    //edades de empleados sanos se suman
                     edad_s = edad + edad_s;
                 }
             }
-
+            //sacamos promedio para ambas variables
             prom_e = edad_e / enf;
             prom_s = edad_s / sano;
 
+            //limpiamos
             Console.Clear();
 
+            //imprimimos resultados
             Console.WriteLine();
-            Console.WriteLine("Empleados enfermos: " + enf);
-            Console.WriteLine("Empleados sanos: " + sano);
+            Console.WriteLine("Numero de Empleados enfermos: " + enf);
+            Console.WriteLine("Numero de Empleados sanos: " + sano);
             Console.WriteLine();
-            Console.WriteLine("Promedio de Edad de Empleados sanos " + prom_s);
-            Console.WriteLine("Promedio de Edad de Empleados enfermos " + prom_e);
+            Console.WriteLine("Edad promedio de Empleados sanos " + prom_s);
+            Console.WriteLine("Edad promedio de Empleados enfermos " + prom_e);
         }
     }
 }
